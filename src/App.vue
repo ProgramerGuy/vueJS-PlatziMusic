@@ -25,7 +25,7 @@ export default {
       artists: [],
       countries: [
       { name:'Argentina', value:'argentina'},
-      { name:'Espania', value:'spain'},
+      { name:'Colombia', value:'colombia'},
       { name:'Mexico', value:'mexico'}
       ],
       selectedCountry : 'argentina',
@@ -36,6 +36,7 @@ export default {
     refreshArtist(){
       const self = this
       this.loading = true
+      this.artists = []
       getArtists(this.selectedCountry)
         .then(function (artists) {
           self.loading = false
